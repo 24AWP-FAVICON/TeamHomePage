@@ -46,7 +46,7 @@ function Member5() {
         </Card>
 
         {/* 이곳에 본인 이름과 학교 적어주세요 */}
-        <h3>Yang ji hun</h3>
+        <h3>Yang jihun</h3>
         <div className="info"><p>Student of Gachon Univ</p></div>
         <div>
           <h2>
