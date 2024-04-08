@@ -61,10 +61,16 @@ function Nav() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/post" className={({isActive}) => (isActive ? "active" : "")}>
+              Post
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/about" className={({isActive}) => (isActive ? "active" : "")}>
               About
             </NavLink>
           </li>
+         
         </ul>
       </nav>
     </NavDiv>
