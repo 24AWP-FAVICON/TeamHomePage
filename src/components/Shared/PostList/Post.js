@@ -78,7 +78,7 @@ const Content = styled.div`
     white-space: pre-wrap;
 `;
 
-const Post = ({count, username, content, comments, likesCount, createdAt}) =>{
+const Post = ({count, username, content, comments, likesCount, createdAt,itemId}) =>{
     console.log(username);
     return (
         <Wrapper>
