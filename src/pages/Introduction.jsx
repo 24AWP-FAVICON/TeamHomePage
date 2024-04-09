@@ -1,42 +1,55 @@
 import React from "react";
 import styled from "styled-components";
-
+import ImgFile from "./HomeImages/Introduction_Image.png";
 const IntroductionDiv = styled.div`
-  padding-left: 40px;
-
+  padding-left: 5em;
+  display: flex;
   h1 {
-    font-size: 40px;
+    font-size: 44px;
     margin-bottom: 50px;
   }
+
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+`;
+
+const IntroductionContentDiv = styled.div`
+  width: 50%;
+  height: auto;
+  margin-right: 50px;
 `;
 
 function Introduction() {
   return (
     <IntroductionDiv>
-      <h1>Introduction</h1>
-      <p>
-        Our team is a group of members with various perspectives and
-        experiences, consisting of three passionate fourth graders and three<br/>
-        creative third graders from Gachon University. We had an in-depth
-        brainstorming session to set the direction of the project, and in the<br/>
-        process, we selected interesting topics based on our ideas and passion.<br/><br/>
-      </p>
-      <p>
-        This colorful combination distributes roles evenly so that each member
-        can demonstrate their abilities in front-end and back-end development<br/>
-        areas, and through this, we want to realize a true teamwork in which the
-        entire team works together toward one goal. Our main goal is to combine<br/>
-        our technical capabilities and creativity to produce optimal outcomes,
-        and in this process, we will learn, grow, and feel a sense of<br/>
-        accomplishment together.<br/><br/>
-      </p>
-      <p>
-        This project will go beyond the simple challenge of expanding our
-        technical capabilities, realizing the importance of collaboration, and,<br/>
-        most importantly, bringing our creative ideas into reality. Through this
-        journey, we will unleash our capabilities to the fullest and deliver<br/>
-        outstanding project outcomes that exceed expectations.<br/><br/>
-      </p>
+      <IntroductionContentDiv>
+        <h1>Introduction</h1>
+        <p>
+          Hello, we are the "Favicon" team! In the web, a favicon is more than
+          just an icon for a webpage. it's a small but powerful symbol that
+          represents the identity of the site. Our team also aspires to be like
+          a favicon, small but with a powerful influence. <br/><br/>
+        </p>
+        <p>
+          It aims to be a platform that provides the communities necessary for
+          making travel plans and manages travel schedules, tourist
+          destinations, and accommodation information. Furthermore, we intend to
+          enrich travel plans by providing location information, reviews, and
+          photos of travel destinations using Google Maps API.<br/><br/>
+        </p>
+        <p>
+          The 'Favicon' team would like to proceed with the project to make the
+          trip more special for the users.
+        </p>
+      </IntroductionContentDiv>
+      <div>
+        <img
+          style={{ width: "40vw", height: "65vh", marginTop: "8em" }}
+          src={ImgFile}
+        ></img>
+      </div>
     </IntroductionDiv>
   );
 }

@@ -30,6 +30,7 @@ const LikeButton = () => {
             border: "none",
             cursor: "pointer",
             outline: "none",
+            paddingLeft: "20px"
           }}
         >
           {/* liked 상태에 따라 다른 하트 아이콘을 보여줌 */}

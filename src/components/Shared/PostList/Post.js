@@ -13,7 +13,10 @@ import CommentSection from "./CommentSection";
 const formatter = buildFormatter(koreanStrings); // 한글 형식으로 보여주기 위해 필요
 
 const Wrapper = styled.div`
-    width: calc((100% - 32px) / 3);
+    margin-left: 9vw;
+    width: 77vw;
+    border-radius: 15px;
+    padding: 1em;
     ${media.desktop`
         width: calc((100% - 16px) / 2);
     `}

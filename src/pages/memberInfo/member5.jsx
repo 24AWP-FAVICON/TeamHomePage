@@ -22,14 +22,23 @@ const StyledLink = styled(Link)`
   p{
     padding-left: 80px;
   }
+`;
 
-
+const StyledTilteText = styled.div`
+  h1 {
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
 `;
 
 function Member5() {
   return (
-
-    <div className="col-sm-12 col-md-4" id="info">
+    
+    <div>
+      <StyledTilteText className="TitleText">
+        <h1>MEMBER INFROMATION</h1>
+      </StyledTilteText>
+      <div className="col-sm-12 col-md-4" id="info">
       <ul className="navi">
         <a href="#info"><li className="href">Intro</li></a>
         <a href="#tech_stack"><li className="href">Tech stack</li></a>
@@ -48,7 +57,7 @@ function Member5() {
 
 
         <Card style={{ borderRadius: '12px', marginBottom: '24px', textAlign: 'center' }}>
-          <Card.Body style={{ padding: '12px', backdropFilter: 'blur(10px)' }}>
+          <Card.Body style={{ padding: '12px'}}>
             {/* 이곳에 본인의 간단한 소개말 적어주세요 */}
             <p>Hello!! I'm Yang jihun.</p>
             <p>Student of Gachon Univ Finencial mathmethics Dept.</p>
@@ -141,6 +150,7 @@ function Member5() {
       </div >
 
     </div >
+    </div>
 
   );
 }

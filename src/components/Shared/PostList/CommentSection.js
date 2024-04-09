@@ -31,7 +31,7 @@ const CommentSection = ({ initialComments }) => {
         size={25}
         color="black"
         onClick={toggleCommentVisibility}
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer" , paddingLeft: "15px"}}
       />
       {/* 댓글 개수 */}
       <span className="comment-count">
@@ -85,5 +85,6 @@ const SendButton = styled.button`
   border: none;
   cursor: pointer;
 `;
+
 
 export default CommentSection;

@@ -24,9 +24,20 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledTilteText = styled.div`
+  h1 {
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
+`;
+
 function Member6() {
   return (
-    <div className="col-sm-12 col-md-4" id="info">
+    <div>
+      <StyledTilteText className="TitleText">
+        <h1>MEMBER INFROMATION</h1>
+      </StyledTilteText>
+      <div className="col-sm-12 col-md-4" id="info">
       <ul className="navi">
         <a href="#info"><li className="href">Intro</li></a>
         <a href="#tech_stack"><li className="href">Tech stack</li></a>
@@ -50,7 +61,7 @@ function Member6() {
             textAlign: "center",
           }}
         >
-          <Card.Body style={{ padding: "12px", backdropFilter: "blur(10px)" }}>
+          <Card.Body style={{ padding: "12px"}}>
             {/* 이곳에 본인의 간단한 소개말 적어주세요 */}
             <p>Hello!! I'm Kim Min Jae.</p>
             <p>Student of Gachon Univ finance mathematics Dept.</p>
@@ -178,7 +189,7 @@ function Member6() {
           {/* 본인 프로젝트 소갯말과 github링크 적용시켜 주세요 */}
           <ul>
             <div style={{ marginTop: "20px" }}>
-              <h3>Mingle:당근마켓 clone coding</h3>
+              <h3>당근마켓 clone coding</h3>
               <p>Working Period: 2021.11 ~ 2022.02</p>
               <p>Role: front-end</p>
               <li>
@@ -194,6 +205,7 @@ function Member6() {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 }

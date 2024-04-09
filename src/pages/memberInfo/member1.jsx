@@ -11,7 +11,6 @@ import projectImage1 from './images/jaeminProject1.png';
 import projectImage2 from './images/jaeminProject2.png';
 
 const StyledLink = styled(Link)`
-  width: calc(33.333% - 20px);
   text-decoration: none;
   color: inherit;
 
@@ -25,10 +24,22 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledTilteText = styled.div`
+  h1 {
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
+`;
+
+
 function Member1() {
   return (
+    <div>
+      <StyledTilteText className="TitleText">
+        <h1>MEMBER INFROMATION</h1>
+      </StyledTilteText>
 
-    <div className="col-sm-12 col-md-4" id="info">
+      <div className="col-sm-12 col-md-4" id="info">
       <ul className="navi">
         <a href="#info"><li className="href">Intro</li></a>
         <a href="#tech_stack"><li className="href">Tech stack</li></a>
@@ -41,13 +52,11 @@ function Member1() {
       <div className="item">
         <img
           style={{ borderRadius: '50%', width: '150px', height: '150px' }}
-          src= "https://avatars.githubusercontent.com/u/117453101?s=64&v=4"
-          alt='Yoon Sang'
+          src= {require("./images/jaemin.png")}
+          alt='jaemin'
         />
-
-
         <Card style={{ borderRadius: '12px', marginBottom: '24px', textAlign: 'center' }}>
-          <Card.Body style={{ padding: '12px', backdropFilter: 'blur(10px)' }}>
+          <Card.Body style={{ padding: '12px'}}>
             {/* 이곳에 본인의 간단한 소개말 적어주세요 */}
             <p>Hello.</p>
             <p>I'm Park jae-min preparing to become a Front-End Developer.</p>
@@ -187,7 +196,7 @@ function Member1() {
         </div>
       </div >
     </div >
-
+    </div>
   );
 }
 
