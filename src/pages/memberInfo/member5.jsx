@@ -22,8 +22,6 @@ const StyledLink = styled(Link)`
   p{
     padding-left: 80px;
   }
-
-
 `;
 
 const StyledTilteText = styled.div`
@@ -35,7 +33,7 @@ const StyledTilteText = styled.div`
 
 function Member5() {
   return (
-
+    
     <div>
       <StyledTilteText className="TitleText">
         <h1>MEMBER INFROMATION</h1>
