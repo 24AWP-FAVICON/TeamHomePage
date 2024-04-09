@@ -23,10 +23,30 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledTilteText = styled.div`
+  h1 {
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
+`;
+
 function Member2() {
   return (
 
-    <div className="col-sm-12 col-md-4">
+    <div>
+      <StyledTilteText className="TitleText">
+        <h1>MEMBER INFROMATION</h1>
+      </StyledTilteText>
+      <div className="col-sm-12 col-md-4" id="info">
+      <ul className="navi">
+        <a href="#info"><li className="href">Intro</li></a>
+        <a href="#tech_stack"><li className="href">Tech stack</li></a>
+        <a href="#webSite"><li className="href">Web site</li></a>
+        <a href="#goal"><li className="href">Goals in 2024</li></a>
+        <a href="#favorites"><li className="href">Favorites</li></a>
+        <a href="#prof"><li className="href">Profile</li></a>
+        <a href="#works"><li className="href">Projects</li></a>
+      </ul>
       <div className="item">
         <img
           style={{ borderRadius: '50%', width: '150px', height: '150px' }}
@@ -36,7 +56,7 @@ function Member2() {
 
 
         <Card style={{ borderRadius: '12px', marginBottom: '24px', textAlign: 'center' }}>
-          <Card.Body style={{ padding: '12px', backdropFilter: 'blur(10px)' }}>
+          <Card.Body style={{ padding: '12px'}}>
             {/* 이곳에 본인의 간단한 소개말 적어주세요 */}
             <p>Hello!! I'm Gwak Min Seon.</p>
             <p>Student of Gachon Univ Software Dept.</p>
@@ -48,7 +68,7 @@ function Member2() {
         <h3>Gwak Min Seon</h3>
         <div className="info"><p>Student of Gachon Univ</p></div>
         <div>
-          <h2>
+          <h2 id="tech_stack">
             Tech Stack
           </h2>
           {/* 본인 tech stack 이미지를 적용시켜주세요 */}
@@ -57,7 +77,7 @@ function Member2() {
             <img src={require("./images/minjeong_skills/python.png")} style={{ width: '50px', height: '50px', marginRight: '10px' }} />
           </div>
         </div>
-        <h3>
+        <h3 id="webSite">
           Yoon Sang On The Web Site
         </h3>
         <ul>
@@ -70,7 +90,7 @@ function Member2() {
         </ul>
         <Container>
           {/* 본인의 올해 목표 적어주세요 */}
-          <h3>Goals In 2024</h3>
+          <h3 id="goal">Goals In 2024</h3>
           <ListGroup>
             <ListGroup.Item className="d-flex align-items-center">
               원하는 기업에 취업하기
@@ -83,7 +103,7 @@ function Member2() {
             {/* 본인의 취미를 적어주세요 */}
           <div className="styledList" style={{ listStyleType: "none", textAlign: "left", paddingLeft: "0", marginTop: "50px" }}>
             <ul>
-              <h3>Favorites</h3>
+              <h3 id="favorites">Favorites</h3>
               <li>
                 Piano
               </li>
@@ -99,7 +119,7 @@ function Member2() {
           {/* 본인 프로필 적어주세요 */}
           <div className="styledList" style={{ listStyleType: "none", textAlign: "left", paddingLeft: "0", marginTop: "50px" }}>
             <ul>
-              <h3>Profile</h3>
+              <h3 id="prof">Profile</h3>
               <li>Born in: 1998</li>
               <li>Middle School in: 2011 ~ 2013</li>
               <li>High School in: 2014 ~ 2016</li>
@@ -109,6 +129,8 @@ function Member2() {
         </Container>
       </div >
     </div >
+
+    </div>
 
   );
 }

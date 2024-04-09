@@ -5,10 +5,12 @@ import { NavLink } from "react-router-dom";
 const NavDiv = styled.div`
   width: 100%;
   height: 5em;
-  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  max-width: 40%;
+  margin-right: 15em;
 
   nav {
     display: flex;
@@ -22,21 +24,43 @@ const NavDiv = styled.div`
   }
 
   li {
-    padding: 0 2.3em;
+    padding: 1em;
     font-weight: 400;
+    position: relative;
   }
 
   a {
+    font-weight: bold;
+    font-size: 24px;
     text-decoration: none;
-    color: #000;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 0;
+      bottom: -6px;
+      height: 3px;
+      background-color: #008DDA;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after, &.active::after {
+      width: 100%;
+    }
+
     &:hover {
-      color: #5796ec;
+      color: #008DDA;
       transition: color 0.3s ease;
     }
   }
 
   .active {
-    color: #5796ec !important;
+    color: #008DDA !important;
+    
   }
 `;
 
@@ -57,7 +81,7 @@ function Nav() {
           </li>
           <li>
             <NavLink to="/introduction" className={({isActive}) => (isActive ? "active" : "")}>
-              Introducion
+              Introduction
             </NavLink>
           </li>
           <li>

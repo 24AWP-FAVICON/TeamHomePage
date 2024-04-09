@@ -2,7 +2,6 @@ import React from "react";
 import { InitFont } from "./InitFont.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./pages/Header";
-import Nav from "./pages/Nav";
 import Home from "./pages/Home";
 import Introduction from "./pages/Introduction";
 import TeamMember from "./pages/TeamMember";
@@ -17,7 +16,6 @@ function App() {
       <>
         <InitFont />
         <Header></Header>
-        <Nav></Nav>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route

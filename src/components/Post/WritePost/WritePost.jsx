@@ -7,7 +7,7 @@ import { media } from '../../../lib/styleUtils';
 import { useState } from 'react';
 
 const Wrapper = styled.div`
-    width: 768px;
+    width: 77vw;
     margin: 0 auto;
     border-radius: 15px;
     padding: 1rem;
@@ -28,7 +28,7 @@ const StyledTextarea = styled(Textarea)`
     border: none;
     resize: none;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
     color: white;
     ::placeholder {
@@ -42,10 +42,10 @@ const StyledTextarea = styled(Textarea)`
 const Button = styled.button`
     position: absolute;
     bottom: 0;
-    right: 3%;
-    background-color: white;
-    border-radius: 5px;
-    font-weight: bold;
+    right: 0%;
+    background-color: #606060;
+    color: #fff;
+    border-radius: 10px;
     font-size: 1rem;
     padding: 0.5rem;
     height: 50px;
