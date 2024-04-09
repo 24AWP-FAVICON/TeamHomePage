@@ -85,9 +85,11 @@ const Post = ({count, username, content, comments, likesCount, createdAt}) =>{
                 <Count>#{count}번째 생각</Count>
                 <Time><TimeAgo date={createdAt} formatter={formatter}/></Time>
             </PostHead>
-            <Content>
-                {content}
-            </Content>
+            <Content>{content}</Content>
+            <div>
+                <LikeButton itemId={itemId} />
+                <CommentSection itemId={itemId} comments={comments} />
+            </div>
         </Wrapper>
     )
 }
