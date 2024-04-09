@@ -7,6 +7,8 @@ import TimeAgo from 'react-timeago'
 import koreanStrings from 'react-timeago/lib/language-strings/ko';
 import buildFormatter from 'react-timeago/lib/formatters/buildFormatter';
 import { media, shadow } from '../../../lib/styleUtils';
+import LikeButton from "./LikeButton";
+import CommentSection from "./CommentSection";
 
 const formatter = buildFormatter(koreanStrings); // 한글 형식으로 보여주기 위해 필요
 
@@ -30,6 +32,7 @@ const PostHead = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid ${oc.gray[2]};
 `;
 
