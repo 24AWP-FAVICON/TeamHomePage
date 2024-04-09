@@ -28,7 +28,16 @@ const StyledLink = styled(Link)`
 function Member1() {
   return (
 
-    <div className="col-sm-12 col-md-4">
+    <div className="col-sm-12 col-md-4" id="info">
+      <ul className="navi">
+        <a href="#info"><li className="href">Intro</li></a>
+        <a href="#tech_stack"><li className="href">Tech stack</li></a>
+        <a href="#webSite"><li className="href">Web site</li></a>
+        <a href="#goal"><li className="href">Goals in 2024</li></a>
+        <a href="#favorites"><li className="href">Favorites</li></a>
+        <a href="#prof"><li className="href">Profile</li></a>
+        <a href="#works"><li className="href">Projects</li></a>
+      </ul>
       <div className="item">
         <img
           style={{ borderRadius: '50%', width: '150px', height: '150px' }}
@@ -50,7 +59,7 @@ function Member1() {
         <h3>Park Jae Min</h3>
         <div className="info"><p>Student of Gachon Univ</p></div><br/>
         <div>
-          <h2>
+          <h2 id="tech_stack">
             Tech Stack
           </h2>
           {/* 본인 tech stack 이미지를 적용시켜주세요 */}
@@ -66,7 +75,7 @@ function Member1() {
           </div>
         </div>
         <br/>
-        <h3>
+        <h3 id="webSite">
           Jae min On The Web Site
         </h3>
         <ul>
@@ -83,7 +92,7 @@ function Member1() {
         </ul>
         <br/>
         <Container>
-          <h3>Goals In 2024</h3>
+          <h3 id="goal">Goals In 2024</h3>
           <ListGroup>
             <ListGroup.Item className="d-flex align-items-center">
               정보처리기사
@@ -99,7 +108,7 @@ function Member1() {
             {/* 본인의 취미를 적어주세요 */}
           <div className="styledList" style={{ listStyleType: "none", textAlign: "left", paddingLeft: "0", marginTop: "50px" }}>
             <ul>
-              <h3>Favorites</h3>
+              <h3 id="favorites">Favorites</h3>
               <li>
                 RPG Game
               </li>
@@ -117,7 +126,7 @@ function Member1() {
 
           <div className="styledList" style={{ listStyleType: "none", textAlign: "left", paddingLeft: "0", marginTop: "50px" }}>
             <ul>
-              <h3>Profile</h3>
+              <h3 id="prof">Profile</h3>
               <li>Born in: 1998</li>
               <li>Middle School in: 2011 ~ 2013</li>
               <li>High School in: 2014 ~ 2016</li>

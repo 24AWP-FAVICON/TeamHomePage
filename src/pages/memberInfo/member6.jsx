@@ -26,7 +26,16 @@ const StyledLink = styled(Link)`
 
 function Member6() {
   return (
-    <div className="col-sm-12 col-md-4">
+    <div className="col-sm-12 col-md-4" id="info">
+      <ul className="navi">
+        <a href="#info"><li className="href">Intro</li></a>
+        <a href="#tech_stack"><li className="href">Tech stack</li></a>
+        <a href="#webSite"><li className="href">Web site</li></a>
+        <a href="#goal"><li className="href">Goals in 2024</li></a>
+        <a href="#favorites"><li className="href">Favorites</li></a>
+        <a href="#prof"><li className="href">Profile</li></a>
+        <a href="#works"><li className="href">Projects</li></a>
+      </ul>
       <div className="item">
         <img
           style={{ borderRadius: "50%", width: "150px", height: "150px" }}
@@ -55,7 +64,7 @@ function Member6() {
           <p>Student of Gachon Univ finance mathematics Dept</p>
         </div>
         <div>
-          <h2>Tech Stack</h2>
+          <h2 id="tech_stack">Tech Stack</h2>
           {/* 본인 tech stack 이미지를 적용시켜주세요 */}
           <div>
             <img
@@ -80,7 +89,7 @@ function Member6() {
             />
           </div>
         </div>
-        <h3>Yoon Sang On The Web Site</h3>
+        <h3 id="webSite">Yoon Sang On The Web Site</h3>
         <ul>
           {/* 본인 관련 웹사이트 링크와 이미지 적용시켜 주세요 */}
           <StyledLink href="https://github.com/kareawe">
@@ -104,7 +113,7 @@ function Member6() {
         </ul>
         <Container>
           {/* 본인의 올해 목표 적어주세요 */}
-          <h3>Goals In 2024</h3>
+          <h3 id="goal">Goals In 2024</h3>
           <ListGroup>
             <ListGroup.Item className="d-flex align-items-center">
               <FiCheckCircle className="mr-3" />
@@ -124,6 +133,7 @@ function Member6() {
 
           {/* 본인의 취미를 적어주세요 */}
           <div
+            id="favorites"
             className="styledList"
             style={{
               listStyleType: "none",
@@ -152,7 +162,7 @@ function Member6() {
             }}
           >
             <ul>
-              <h3>Profile</h3>
+              <h3 id="prof">Profile</h3>
               <li>Born in: 2001</li>
               <li>Middle School in: 2014 ~ 2016</li>
               <li>High School in: 2017 ~ 2019</li>
