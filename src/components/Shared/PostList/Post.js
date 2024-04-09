@@ -7,6 +7,8 @@ import TimeAgo from 'react-timeago'
 import koreanStrings from 'react-timeago/lib/language-strings/ko';
 import buildFormatter from 'react-timeago/lib/formatters/buildFormatter';
 import { media, shadow } from '../../../lib/styleUtils';
+import LikeButton from "./LikeButton";
+import CommentSection from "./CommentSection";
 
 const formatter = buildFormatter(koreanStrings); // 한글 형식으로 보여주기 위해 필요
 
@@ -78,7 +80,7 @@ const Content = styled.div`
     white-space: pre-wrap;
 `;
 
-const Post = ({count, username, content, comments, likesCount, createdAt}) =>{
+const Post = ({count, username, content, comments, likesCount, createdAt,itemId}) =>{
     console.log(username);
     return (
         <Wrapper>
@@ -88,9 +90,11 @@ const Post = ({count, username, content, comments, likesCount, createdAt}) =>{
                 <Count>#{count}번째 생각</Count>
                 <Time><TimeAgo date={createdAt} formatter={formatter}/></Time>
             </PostHead>
-            <Content>
-                {content}
-            </Content>
+            <Content>{content}</Content>
+            <div>
+                <LikeButton itemId={itemId} />
+                <CommentSection itemId={itemId} comments={comments} />
+            </div>
         </Wrapper>
     )
 }
