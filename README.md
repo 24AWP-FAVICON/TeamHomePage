@@ -1,22 +1,22 @@
 # Menu Structure Diagram
 
-App
-├── InitFont
-├── Header
-│   └── Nav
-└── Routes
-    ├── "/" -> Home
-    │   ├── Introduction (Click the "Introduction" button in Nav)
-    │   ├── TeamMember (Click the "MemberInfo" button in Nav)
-    │   │   ├── Member1 (Click on the image in TeamMember)
-    │   │   ├── Member2
-    │   │   ├── Member3
-    │   │   ├── Member4
-    │   │   ├── Member5
-    │   │   └── Member6
-    │   ├── Post (Click the "Post" button in Nav)
-    │   └── About (Click the "About" button in Nav)
-    ├── "/teamMember/*" -> TeamMember
-    ├── "/introduction" -> Introduction
-    ├── "/about" -> About
-    └── "/post" -> Post
+App </br>
+├── InitFont</br>
+├── Header</br>
+│   └── Nav</br>
+└── Routes</br>
+    ├── "/" -> Home</br>
+    │   ├── Introduction (Click the "Introduction" button in Nav)</br>
+    │   ├── TeamMember (Click the "MemberInfo" button in Nav)</br>
+    │   │   ├── Member1 (Click on the image in TeamMember)</br>
+    │   │   ├── Member2</br>
+    │   │   ├── Member3</br>
+    │   │   ├── Member4</br>
+    │   │   ├── Member5</br>
+    │   │   └── Member6</br>
+    │   ├── Post (Click the "Post" button in Nav)</br>
+    │   └── About (Click the "About" button in Nav)</br>
+    ├── "/teamMember/*" -> TeamMember</br>
+    ├── "/introduction" -> Introduction</br>
+    ├── "/about" -> About</br>
+    └── "/post" -> Post</br>
