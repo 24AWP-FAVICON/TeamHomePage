@@ -60,13 +60,13 @@ const mock = [
 ]
 
 function WritePostContainer() {
-    const [data, setData] = useState(mock);
+    const [data, setData] = useState(mock.reverse());
     const [userName, setUserName] = useState("");
     if(!data) return null;
 
     return (
         <>
-        <UserName userName={userName} setUserName={setUserName}/>
+        <UserName setUserName={setUserName}/>
         <WritePost setData={setData} userName={userName}/>
         <PostList data={data}/>
         </>
