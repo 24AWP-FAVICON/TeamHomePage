@@ -11,7 +11,7 @@ function UserName({ setUserName }) {
         <h1>POST</h1>
       </StyledTilteText>
       <Wrapper>
-        <StyledTextarea
+        <StyledInput
           minRows={3}
           maxRows={10}
           placeholder="이름을 입력하세요"
@@ -22,7 +22,7 @@ function UserName({ setUserName }) {
   );
 }
 
-const StyledTextarea = styled.input`
+const StyledInput = styled.input`
   width: 100%;
   background: transparent;
   border: none;
