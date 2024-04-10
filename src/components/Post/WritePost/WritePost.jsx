@@ -57,11 +57,12 @@ const Form = styled.form`
 
 function WritePost({setData, userName}) {
     const [input, setInput] = useState('');
+    const [cnt, setCnt] = useState(6);
     const onSubmit = (event) => {
        event.preventDefault();
       setData((prev) => [
      {  __v: 0,
-        count: 5,
+        count: cnt,
         username: userName,
         content: input,
         _id: "595f8972e3d79767f1e35430",
@@ -73,6 +74,7 @@ function WritePost({setData, userName}) {
         ...prev
         ])
         setInput("");
+        setCnt((prev) => prev + 1);
     }
     return (
         <Wrapper>
