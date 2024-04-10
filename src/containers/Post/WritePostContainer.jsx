@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import WritePost from '../../components/Post/WritePost';
-import { toast } from 'react-toastify';
 import PostList from '../../components/Shared/PostList';
 import UserName from '../../components/Post/UserName/UserName';
  
@@ -60,13 +59,13 @@ const mock = [
 ]
 
 function WritePostContainer() {
-    const [data, setData] = useState(mock);
+    const [data, setData] = useState(mock.reverse());
     const [userName, setUserName] = useState("");
     if(!data) return null;
 
     return (
         <>
-        <UserName userName={userName} setUserName={setUserName}/>
+        <UserName setUserName={setUserName}/>
         <WritePost setData={setData} userName={userName}/>
         <PostList data={data}/>
         </>

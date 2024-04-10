@@ -16,7 +16,6 @@ const PostWrapper = styled.div`
 `
 
 const PostList = ({data}) => {
-    console.log(data);
     return(
         <Wrapper>
             {/* <Masonry options={{gutter: 16}}> */}

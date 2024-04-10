@@ -2,7 +2,6 @@ import { media } from "../../../lib/styleUtils";
 import styled from "styled-components";
 import oc from "open-color";
 import { shadow } from "../../../lib/styleUtils";
-import Textarea from "react-textarea-autosize";
 
 function UserName({ setUserName }) {
   return (
@@ -11,7 +10,7 @@ function UserName({ setUserName }) {
         <h1>POST</h1>
       </StyledTilteText>
       <Wrapper>
-        <StyledTextarea
+        <StyledInput
           minRows={3}
           maxRows={10}
           placeholder="이름을 입력하세요"
@@ -22,7 +21,7 @@ function UserName({ setUserName }) {
   );
 }
 
-const StyledTextarea = styled.input`
+const StyledInput = styled.input`
   width: 100%;
   background: transparent;
   border: none;
