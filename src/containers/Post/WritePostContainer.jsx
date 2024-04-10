@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import WritePost from '../../components/Post/WritePost';
-import { toast } from 'react-toastify';
 import PostList from '../../components/Shared/PostList';
 import UserName from '../../components/Post/UserName/UserName';
  

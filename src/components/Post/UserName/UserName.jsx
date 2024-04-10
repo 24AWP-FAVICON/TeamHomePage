@@ -2,7 +2,6 @@ import { media } from "../../../lib/styleUtils";
 import styled from "styled-components";
 import oc from "open-color";
 import { shadow } from "../../../lib/styleUtils";
-import Textarea from "react-textarea-autosize";
 
 function UserName({ setUserName }) {
   return (
