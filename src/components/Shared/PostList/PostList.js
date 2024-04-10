@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Masonry from 'react-masonry-component';
+//import Masonry from 'react-masonry-component';
 import Post from './Post';
 
 const Wrapper = styled.div`
