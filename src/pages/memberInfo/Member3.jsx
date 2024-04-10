@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from 'react-bootstrap/Card';
 import styled from "styled-components";
 import { Container, ListGroup } from 'react-bootstrap';
@@ -28,8 +28,10 @@ const StyledTilteText = styled.div`
 
 function Member3() {
 
-  const projects =
-    [{
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    setProjects([{
       title: 'Golbang: Golf Community Event Project',
       workingPeriod: '2024.02 ~ In progress',
       role: ' UI Design, Backend(Spring Framework), DevOps',
@@ -57,7 +59,14 @@ function Member3() {
       githubLink: 'https://github.com/Mingguriguri/pang',
       image: [projectImage6],
     }
-  ]
+    ]
+    )
+
+
+  }, [])
+
+
+
 
   return (
 

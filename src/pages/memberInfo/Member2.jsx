@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -41,30 +41,36 @@ const StyledTilteText = styled.div`
 
 function Member2() {
 
-  const projects =
-    [
-      {
-        title: 'Mingle:To-Do Web Application Project',
-        workingPeriod: '2024.01 ~ 2024.03',
-        role: 'Backend(Spring Framework)',
-        githubLink: 'https://github.com/Todo-WebApp-Project',
-        image: [projectImage1],
-      },
-      {
-        title: 'Sweat:AI Blog Project',
-        workingPeriod: ' 2024.09 ~ 2024.12',
-        role: 'Frontend & Infra (React)',
-        githubLink: 'https://github.com/KakaoEnterprise-SWEAT',
-        image: [projectImage2],
-      },
-      {
-        title: 'Anipet:Pet Community System',
-        workingPeriod: '2023.03 ~ 2023.07',
-        role: 'Backend (node & express.js)',
-        githubLink: 'https://github.com/YoonYn9915/anipet',
-        image: [projectImage3],
-      }
-    ]
+  const [projects, setProjects] = useState([]);
+
+  useEffect(()=>{
+    setProjects(
+      [
+        {
+          title: 'Mingle:To-Do Web Application Project',
+          workingPeriod: '2024.01 ~ 2024.03',
+          role: 'Backend(Spring Framework)',
+          githubLink: 'https://github.com/Todo-WebApp-Project',
+          image: [projectImage1],
+        },
+        {
+          title: 'Sweat:AI Blog Project',
+          workingPeriod: ' 2024.09 ~ 2024.12',
+          role: 'Frontend & Infra (React)',
+          githubLink: 'https://github.com/KakaoEnterprise-SWEAT',
+          image: [projectImage2],
+        },
+        {
+          title: 'Anipet:Pet Community System',
+          workingPeriod: '2023.03 ~ 2023.07',
+          role: 'Backend (node & express.js)',
+          githubLink: 'https://github.com/YoonYn9915/anipet',
+          image: [projectImage3],
+        }
+      ]
+    ) 
+  },[])
+ 
 
   return (
     <div>
@@ -119,17 +125,17 @@ function Member2() {
           </h3>
           <ul>
             {/* 본인 관련 웹사이트 링크와 이미지 적용시켜 주세요 */}
-            <StyledLink href="https://github.com/YoonYn9915">
+            <StyledLink to="https://github.com/YoonYn9915">
               <span style={{ marginRight: '20px' }}>
                 <img src={require("./images/yoonsang_web_icon/github.png")} alt="GitHub Icon" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
               </span>
             </StyledLink>
-            <StyledLink href="https://velog.io/@jys201811/posts">
+            <StyledLink to="https://velog.io/@jys201811/posts">
               <span style={{ marginRight: '20px' }}>
                 <img src={require("./images/yoonsang_web_icon/velog.jpg")} alt="Velog Icon" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
               </span>
             </StyledLink>
-            <StyledLink href="https://blog.naver.com/jsy4407">
+            <StyledLink to="https://blog.naver.com/jsy4407">
               <span style={{ marginRight: '20px' }}>
                 <img src={require("./images/yoonsang_web_icon/naverBlog.jpg")} alt="Naver Blog Icon" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
               </span>
