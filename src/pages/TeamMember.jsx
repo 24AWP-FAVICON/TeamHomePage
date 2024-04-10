@@ -10,10 +10,10 @@ import Member6 from "./memberInfo/Member6";
 
 
 const TeamMemberDiv = styled.div`
-  padding-left: 40px;
+  padding-left: 5em;
 
   h1 {
-    font-size: 40px;
+    font-size: 44px;
     margin-bottom: 50px;
   }
 
@@ -38,12 +38,13 @@ const StyledLink = styled(Link)`
   color: inherit;
 
   img {
-    width: 300px;
+    width: 14.5vw;
     height: auto;
   }
 
   p{
-    padding-left: 80px;
+    font-weight: bold;
+    padding-left: 3.5vw;
   }
 `;
 
@@ -58,7 +59,7 @@ function TeamMember() {
               <h1>Member Information</h1>
               <MemberImageContainer>
                 <StyledLink to="/teamMember/Member1">
-                  <img src="https://avatars.githubusercontent.com/u/117453101?s=64&v=4"alt="Member1"></img>
+                  <img src={require('./memberInfo/images/jaemin.png')} alt="Member1"></img>
                   <p>201835457 박재민</p>
                 </StyledLink>
                 <StyledLink to="/teamMember/Member2">
@@ -71,7 +72,7 @@ function TeamMember() {
                 </StyledLink>
                 <StyledLink to="/teamMember/Member4">
                   <img  src={require('./memberInfo/images/minsun.png')} alt="Member4"></img>
-                  <p>202131421 곽민선</p>
+                  <p>202035504 곽민선</p>
                 </StyledLink>
                 <StyledLink to="/teamMember/Member5">
                   <img src="https://avatars.githubusercontent.com/u/79701544?v=4" alt="Member5"></img>

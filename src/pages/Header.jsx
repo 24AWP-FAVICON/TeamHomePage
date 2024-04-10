@@ -1,12 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
-
+import NavPage from './Nav';
 const HeaderDiv = styled.div`
     position: relative;
     width: 100%;
-    height: 10em;
+    height: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 `;
 
@@ -16,18 +16,21 @@ const BackgroundDiv = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #C8E0FE;
-    /* background-image: url('https://i.namu.wiki/i/qa2NhgamPYvRzexMRusF86uh3yyfBWT3TCoMCsmMk2JMkjI17RneFDTN9nSEL-gfbJebSINBj0zsoMNZAKmbcg.webp');
-    background-size: cover; */
+    background-color: #41C9E2;
     background-position: center;
-    filter: blur(2px);
     z-index: -1;
 `;
 
 const TextDiv = styled.div`
-    font-size: 24px;
-    color: #333;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #fff;
     z-index: 1;
+    margin-left: 3em;
+
+    h1 {
+        margin: 0;
+    }
 `;
 
 function Header() {
@@ -35,6 +38,7 @@ function Header() {
         <HeaderDiv>
             <BackgroundDiv></BackgroundDiv>
             <TextDiv><h1>Favicon</h1></TextDiv>
+            <NavPage></NavPage>
         </HeaderDiv>
     );
 }

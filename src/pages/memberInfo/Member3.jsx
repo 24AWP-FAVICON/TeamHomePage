@@ -26,10 +26,30 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledTilteText = styled.div`
+  h1 {
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
+`;
+
 function Member3() {
   return (
 
-    <div className="col-sm-12 col-md-4">
+    <div>
+      <StyledTilteText className="TitleText">
+        <h1>MEMBER INFROMATION</h1>
+      </StyledTilteText>
+      <div className="col-sm-12 col-md-4" id="info">
+      <ul className="navi">
+        <a href="#info"><li className="href">Intro</li></a>
+        <a href="#tech_stack"><li className="href">Tech stack</li></a>
+        <a href="#webSite"><li className="href">Web site</li></a>
+        <a href="#goal"><li className="href">Goals in 2024</li></a>
+        <a href="#favorites"><li className="href">Favorites</li></a>
+        <a href="#prof"><li className="href">Profile</li></a>
+        <a href="#works"><li className="href">Projects</li></a>
+      </ul>
       <div className="item">
         <img
           style={{ borderRadius: '50%', width: '150px', height: '150px' }}
@@ -39,7 +59,7 @@ function Member3() {
 
 
         <Card style={{ borderRadius: '12px', marginBottom: '24px', textAlign: 'center' }}>
-          <Card.Body style={{ padding: '12px', backdropFilter: 'blur(10px)' }}>
+          <Card.Body style={{ padding: '12px'}}>
             {/* 이곳에 본인의 간단한 소개말 적어주세요 */}
             <p>Hi, I'm Minjeong Kim</p>
             <p>Student of Gachon Univ Biomedical Engineering(BME) Dept.</p>
@@ -51,7 +71,7 @@ function Member3() {
         <h1>Kim Min Jeong</h1>
         <div className="info"><p>Student of Gachon Univ</p></div>
         <div style={{  marginTop: "50px" }}>
-          <h3><FiTool  className="mr-3"/>
+          <h3 id="tech_stack"><FiTool  className="mr-3"/>
             Tech Stack
           </h3>
           {/* 본인 tech stack 이미지를 적용시켜주세요 */}
@@ -63,7 +83,7 @@ function Member3() {
           </div>
         </div>
         <div style={{  marginTop: "50px" }}>
-          <h3><FiBookOpen className="mr-3"/>
+          <h3 id="webSite"><FiBookOpen className="mr-3"/>
             Study Log
           </h3>
           <ul>
@@ -110,7 +130,7 @@ function Member3() {
           </ListGroup>
           </div>
           <div style={{  marginTop: "50px" }}>
-            <h3><FiTrello className="mr-3"/>Goals In 2024</h3>
+            <h3 id="goal"><FiTrello className="mr-3"/>Goals In 2024</h3>
             <ListGroup >
               <ListGroup.Item className="d-flex align-items-left">
                 <FiCircle className="mr-3" />
@@ -152,7 +172,7 @@ function Member3() {
           </div>
           <div className="styledList" style={{ listStyleType: "none", textAlign: "left", paddingLeft: "0", marginTop: "50px" }}>
             <ul>
-              <h3><FiThumbsUp className="mr-3"/>Favorites</h3>
+              <h3 id="favorites"><FiThumbsUp className="mr-3"/>Favorites</h3>
               <li>
                 Running
               </li>
@@ -168,7 +188,7 @@ function Member3() {
           {/* 본인 프로필 적어주세요 */}
           <div className="styledList" style={{ listStyleType: "none", textAlign: "left", paddingLeft: "0", marginTop: "50px" }}>
             <ul>
-              <h3><FiUser className="mr-3"/>Profile</h3>
+              <h3 id="prof"><FiUser className="mr-3"/>Profile</h3>
               <li>Born in: 2000.09.25</li>
               <li>Middle School in: 2013 ~ 2015</li>
               <li>High School in: 2016 ~ 2018</li>
@@ -239,6 +259,7 @@ function Member3() {
         </div>
       </div >
     </div >
+    </div>
 
   );
 }
